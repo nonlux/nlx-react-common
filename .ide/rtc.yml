@@ -1,0 +1,8 @@
+name: rtc
+root: /home/nonlux/src/nlx-react-common
+pre: emacs --eval "(setq server-name \"rtc\")" --daemon
+startup_window: editor
+windows:
+  - none: ''
+  - editor: emacsclient -s rtc ./
+  - zsh: ''

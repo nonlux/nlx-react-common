@@ -1,0 +1,14 @@
+{
+  "generator-prj": {
+    "projectName": "nlx-react-common",
+    "isGithub": true,
+    "description": "react  common components",
+    "projectType": "javascript",
+    "shortName": "rtc",
+    "isBabel": true,
+    "isEslint": true,
+    "isWebpack": true,
+    "isGulp": true,
+    "isReact": true
+  }
+}
