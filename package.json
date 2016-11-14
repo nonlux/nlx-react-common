@@ -1,6 +1,6 @@
 {
   "name": "nlx-react-common",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react  common components",
   "main": "lib/index.js",
   "scripts": {
