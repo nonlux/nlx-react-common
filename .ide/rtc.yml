@@ -1,6 +1,7 @@
 name: rtc
 root: /home/nonlux/src/nlx-react-common
 pre: emacs --eval "(setq server-name \"rtc\")" --daemon
+post: ps aux | grep emacs | grep rtc |  awk '{print $2}' | xargs -n 1 kill
 startup_window: editor
 windows:
   - none: ''
