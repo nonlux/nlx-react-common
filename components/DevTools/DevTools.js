@@ -14,8 +14,10 @@ export default class DevTools extends Component{
   }
   render () {
     const {devTools} = true;
+    console.log(ReduxDevTools);
     return <div>
-    {devTools && <ReduxDevTools />}
+      <ReduxDevTools/>
+    {/* devTools && <ReduxDevTools /> */}
     </div>
   }
 };

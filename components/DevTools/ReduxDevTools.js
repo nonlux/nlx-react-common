@@ -6,7 +6,7 @@ import Dispatcher from 'redux-devtools-dispatch';
 import MultipleMonitors from 'redux-devtools-multiple-monitors';
 
 const DevTools = createDevTools(
-  <DockMonitor toggleVisibilityKey='ctrl-h'
+  <DockMonitor toggleVisibilityKey='ctrl-z'
     changePositionKey='ctrl-q'
     defaultIsVisible={false}>
     <MultipleMonitors>

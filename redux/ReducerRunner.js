@@ -32,8 +32,8 @@ export function loadReducerGenerator(runner, TYPES) {
 
 
 export default class ReducerRunner {
-  constructor() {
-    this.initialState = {};
+  constructor(state = {}) {
+    this.initialState = state;
     this.reducers = {};
   }
 
