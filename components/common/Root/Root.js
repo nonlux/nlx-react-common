@@ -2,19 +2,19 @@ import React, {Component} from 'react';
 
 import {
   DevTools,
-  ReduxProvider as Provider,
-} from '../index';
+  MobxProvider as Provider
+} from 'components/common';
 
 export default class Root extends Component {
   render() {
     const { children, store } = this.props;
     return (
-    <Provider store={store}>
-      <div>
-        { children }
-        <DevTools/>
-      </div>
-    </Provider>
+      <Provider store={store}>
+        <div>
+          { children }
+          <DevTools/>
+        </div>
+      </Provider>
     );
   }
 }

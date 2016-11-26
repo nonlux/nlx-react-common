@@ -1,0 +1,32 @@
+{
+  "dependencies": [
+    "react",
+    "react-addons-pure-render-mixin",
+    "classnames",
+    "mobx",
+    "mobx-react",
+    "react-dom",
+    "react-router"
+  ],
+  "devDependencies": [
+    "react-hot-loader",
+    "react-render-visualizer",
+    "react-render-visualizer-decorator",
+    "react-transform-catch-errors",
+    "redbox-react",
+    "mobx-react-devtools",
+    "why-did-you-update"
+  ],
+  "reduxDev": [
+    "redux-devtools",
+    "redux-devtools-dispatch",
+    "redux-devtools-dock-monitor",
+    "redux-devtools-log-monitor",
+    "redux-devtools-multiple-monitors"
+  ],
+  "redux": [
+    "redux",
+    "redux-form",
+    "redux-thunk"
+  ]
+}
