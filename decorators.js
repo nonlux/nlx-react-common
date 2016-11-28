@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { observable, action } from 'mobx';
+import {observer } from 'mobx-react';
 
 export function trans(section = 'main') {
   let text = {};
@@ -16,6 +18,47 @@ export function trans(section = 'main') {
   };
 }
 
+
+export function extractRoute() {
+  return (WrappedComponent) => {
+    return class Trans extends Component {
+      render() {
+	const { route, params,  routeParams, router, routes, ...rest} = this.props;
+	return <WrappedComponent {...rest} {...params}/>;
+      }
+    };
+  };
+}
+
+class OpenableData {
+  @observable open=false;
+  @action toggle() {
+    this.open = !this.open;
+  }
+  @action close() {
+    this.open = false;
+  }
+}
+
+/*
+export function openable() {
+  const data = new OpenableData();
+  return (WrappedComponent) => {
+    return (props) => {
+	return <WrappedComponent {...props}/>;
+      const Observer = observer(WrappedComponent);
+      return (<Observer
+              {...props}
+              open={data.open}
+              onToggle={() => data.toggle()}
+              onClose={() =>  data.close()}
+              />);
+    };
+  };
+}
+*/
+
+/*
 import { connect } from 'react-redux';
 
 export function fetched( action, mapStateToProps) {
@@ -40,19 +83,6 @@ export function fetched( action, mapStateToProps) {
     return connect(mapStateToProps)(FetchedComponent);
   };
 }
-
-export function extractRoute() {
-  return (WrappedComponent) => {
-    return class Trans extends Component {
-      render() {
-	const { route, params,  routeParams, router, routes, ...rest} = this.props;
-	return <WrappedComponent {...rest} {...params}/>;
-      }
-    };
-  };
-
-}
-
 export function dispatched( action) {
   return (WrappedComponent) => {
     class FetchedComponent extends Component {
@@ -68,3 +98,4 @@ export function dispatched( action) {
     return connect()(FetchedComponent);
   };
 }
+*/
